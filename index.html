@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"> <!--todo namespace -->
+<head>
+    <title>Pratchett guide</title>
+
+    <meta charset="utf-8">
+
+    <script type="text/javascript" src="script/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="script/d3/d3.min.js"></script>
+    <script type="text/javascript" src="script/d3/d3-selection.min.js"></script>
+    <script type="text/javascript" src="script/d3/d3-selection.min.js"></script>
+    <script type="text/javascript" src="script/d3/d3-axis.min.js"></script>
+    <script type="text/javascript" src="script/d3/d3-transition.min.js"></script>
+    <script type="text/javascript" src="script/mds.js"></script>
+    <script type="text/javascript" src="script/numeric-1.2.6.min.js"></script>
+    <script type="text/javascript" src="script/app.js"></script>
+    <script type="text/javascript" src="script/layout.js"></script>
+    <script type="text/javascript" src="script/inputs.js"></script>
+
+    <script type="text/javascript" src="script/data/books.js"></script>
+    <script type="text/javascript" src="script/data/distances-array.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="style/pratchett.css"/>
+
+    <script>
+        $(function () {
+            let layout = new Layout();
+            let inputs = new Inputs($("#affinities input"));
+
+            visualize(books, distances());
+
+            $("#render").click(function () {
+                update(distances());
+            });
+
+            function distances() {
+                return layout.fresh(inputs.weights(), books);
+            }
+        });
+
+    </script>
+
+</head>
+<body>
+<nav>
+    <a href="">about</a> |
+    <a href="">tool</a> |
+    <a href="">legend</a> |
+    <a href="">books</a>
+</nav>
+<section id="about">
+    What is this all about
+</section>
+<section id="tool">
+    <div id="picture">
+        <svg></svg>
+    </div>
+    <aside id="affinities">
+        <form>
+            <div>Assign weight for common meta between two books</div>
+            <label>universe</label><input id="universe" type="number" min="0" max="500" value="170">
+            <label>storyline</label><input id="storyline" type="number" min="0" max="500" value="370">
+            <label>set</label><input id="set" type="number" min="0" max="500" value="92">
+            <label>main char</label><input id="main_char" type="number" min="0" max="500" value="150">
+            <label>minor char</label><input id="minor_char" type="number" min="0" max="500" value="30">
+            <label>literature form</label><input id="lit_form" type="number" min="0" max="100" value="4">
+            <label>co-author</label><input id="co_author" type="number" min="0" max="500" value="10">
+            <label id="render">render</label>
+        </form>
+    </aside>
+</section>
+<section id="legend">
+    legend
+</section>
+<section id="books">
+    list of books
+</section>
+<footer>
+    <p>thanks to</p>
+    <a href="https://coolors.co/">coolors</a>
+</footer>
+<footer>
+    <address>
+        On <a target="_blank" href="https://github.com/eparovyshnaya">GitHub</a>
+    </address>
+</footer>
+</body>
+</html>
