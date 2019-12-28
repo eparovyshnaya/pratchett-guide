@@ -840,7 +840,6 @@ var books =
         "color": "#a06263",
         "storyLine": "city watch",
         "minorCharacters": [
-            "vimes",
             "angua",
             "gaspode",
             "wolfgang",
