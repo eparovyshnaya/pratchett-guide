@@ -17,7 +17,7 @@ let Layout = function () {
             distances[i] = [];
             for (let j in affinities[i]) {
                 if (i === j) {
-                    distances[i][j] = 0
+                    distances[i][j] = 0;
                     continue;
                 }
                 distances[i][j] = max - affinities[i][j] + 1;
@@ -38,9 +38,9 @@ let Layout = function () {
                 } else if (Number(j) < Number(i)) {
                     affinities[i][j] = affinities[j][i];
                 } else {
-                    let affi = affinity(bookI, bookJ, weights);
-                    affinities[i][j] = affi;
-                    onEach(affi);
+                    let affinityIJ = affinity(bookI, bookJ, weights);
+                    affinities[i][j] = affinityIJ;
+                    onEach(affinityIJ);
                 }
             }
         }
