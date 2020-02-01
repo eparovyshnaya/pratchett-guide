@@ -6,7 +6,7 @@ var books =
         "universe": "the carpet",
         "releaseYear": 1971,
         "literatureForm": "novel",
-        "color": "#5ab0b1",
+        "color": "2",
         "storyLine": "the carpet",
         "minorCharacters": [
 
@@ -23,7 +23,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1983,
         "literatureForm": "novel",
-        "color": "#ff6162",
+        "color": "1",
         "storyLine": "rincewind",
         "minorCharacters": [
             "gods of diskworld",
@@ -50,7 +50,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1986,
         "literatureForm": "novel",
-        "color": "#ff6162",
+        "color": "1",
         "storyLine": "rincewind",
         "minorCharacters": [
             "death",
@@ -77,7 +77,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1987,
         "literatureForm": "novel",
-        "color": "#758aff",
+        "color": "3",
         "storyLine": "witches",
         "minorCharacters": [
             "granny weatherwax",
@@ -98,7 +98,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1987,
         "literatureForm": "novel",
-        "color": "#e0d90e",
+        "color": "4",
         "storyLine": "death",
         "minorCharacters": [
             "mort",
@@ -122,7 +122,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1988,
         "literatureForm": "novel",
-        "color": "#ff6162",
+        "color": "1",
         "storyLine": "rincewind",
         "minorCharacters": [
             "the luggage",
@@ -151,7 +151,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1988,
         "literatureForm": "novel",
-        "color": "#758aff",
+        "color": "3",
         "storyLine": "witches",
         "minorCharacters": [
             "magrat garlick",
@@ -177,7 +177,7 @@ var books =
         "universe": "town of blackbury",
         "releaseYear": 1989,
         "literatureForm": "novel",
-        "color": "#b1ac86",
+        "color": "10",
         "storyLine": "nomes",
         "minorCharacters": [
             "grimma",
@@ -195,7 +195,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1989,
         "literatureForm": "novel",
-        "color": "#80e57d",
+        "color": "12",
         "storyLine": "gods of diskworld",
         "minorCharacters": [
             "teppic",
@@ -214,7 +214,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1989,
         "literatureForm": "novel",
-        "color": "#a06263",
+        "color": "8",
         "storyLine": "city watch",
         "minorCharacters": [
             "the librarian",
@@ -239,7 +239,7 @@ var books =
         "universe": "",
         "releaseYear": 1989,
         "literatureForm": "novel",
-        "color": "white",
+        "color": "13",
         "storyLine": "",
         "minorCharacters": [
 
@@ -256,7 +256,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1989,
         "literatureForm": "story",
-        "color": "#e0d90e",
+        "color": "4",
         "storyLine": "death",
         "minorCharacters": [
             "death"
@@ -273,7 +273,7 @@ var books =
         "universe": "town of blackbury",
         "releaseYear": 1990,
         "literatureForm": "novel",
-        "color": "#b1ac86",
+        "color": "10",
         "storyLine": "nomes",
         "minorCharacters": [
             "masklin",
@@ -291,7 +291,7 @@ var books =
         "universe": "town of blackbury",
         "releaseYear": 1990,
         "literatureForm": "novel",
-        "color": "#b1ac86",
+        "color": "10",
         "storyLine": "nomes",
         "minorCharacters": [
             "masklin",
@@ -309,7 +309,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1990,
         "literatureForm": "novel",
-        "color": "#ff6162",
+        "color": "1",
         "storyLine": "rincewind",
         "minorCharacters": [
             "the luggage",
@@ -333,7 +333,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1990,
         "literatureForm": "novel",
-        "color": "#e071da",
+        "color": "5",
         "storyLine": "diskworld",
         "minorCharacters": [
             "theda withel",
@@ -386,7 +386,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1991,
         "literatureForm": "novel",
-        "color": "#e0d90e",
+        "color": "4",
         "storyLine": "death",
         "minorCharacters": [
             "miss flitworth",
@@ -409,7 +409,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1991,
         "literatureForm": "novel",
-        "color": "#758aff",
+        "color": "3",
         "storyLine": "witches",
         "minorCharacters": [
             "magrat garlick",
@@ -434,7 +434,7 @@ var books =
         "universe": "town of blackbury",
         "releaseYear": 1992,
         "literatureForm": "novel",
-        "color": "#1cced4",
+        "color": "11",
         "storyLine": "johnny maxwell",
         "minorCharacters": [
             "wobbler",
@@ -457,7 +457,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1992,
         "literatureForm": "novel",
-        "color": "#80e57d",
+        "color": "12",
         "storyLine": "gods of diskworld",
         "minorCharacters": [
             "om",
@@ -482,7 +482,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1992,
         "literatureForm": "novel",
-        "color": "#758aff",
+        "color": "3",
         "storyLine": "witches",
         "minorCharacters": [
             "academics",
@@ -512,7 +512,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1992,
         "literatureForm": "story",
-        "color": "#e071da",
+        "color": "5",
         "storyLine": "diskworld",
         "minorCharacters": [
             "detritus",
@@ -530,7 +530,7 @@ var books =
         "universe": "town of blackbury",
         "releaseYear": 1993,
         "literatureForm": "novel",
-        "color": "#1cced4",
+        "color": "11",
         "storyLine": "johnny maxwell",
         "minorCharacters": [
             "wobbler",
@@ -553,7 +553,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1993,
         "literatureForm": "novel",
-        "color": "#a06263",
+        "color": "8",
         "storyLine": "city watch",
         "minorCharacters": [
             "angua",
@@ -581,7 +581,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1993,
         "literatureForm": "story",
-        "color": "#a06263",
+        "color": "8",
         "storyLine": "city watch",
         "minorCharacters": [
             "carrot",
@@ -599,7 +599,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1994,
         "literatureForm": "novel",
-        "color": "#e0d90e",
+        "color": "4",
         "storyLine": "death",
         "minorCharacters": [
             "susan sto helit",
@@ -626,7 +626,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1995,
         "literatureForm": "novel",
-        "color": "#ff6162",
+        "color": "1",
         "storyLine": "rincewind",
         "minorCharacters": [
             "dibble",
@@ -653,7 +653,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1995,
         "literatureForm": "novel",
-        "color": "#758aff",
+        "color": "3",
         "storyLine": "witches",
         "minorCharacters": [
             "magrat garlick",
@@ -675,7 +675,7 @@ var books =
         "universe": "town of blackbury",
         "releaseYear": 1996,
         "literatureForm": "novel",
-        "color": "#1cced4",
+        "color": "11",
         "storyLine": "johnny maxwell",
         "minorCharacters": [
             "wobbler",
@@ -698,7 +698,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1996,
         "literatureForm": "novel",
-        "color": "#a06263",
+        "color": "8",
         "storyLine": "city watch",
         "minorCharacters": [
             "vetinari",
@@ -719,7 +719,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1996,
         "literatureForm": "novel",
-        "color": "#e0d90e",
+        "color": "4",
         "storyLine": "death",
         "minorCharacters": [
             "lord downey",
@@ -742,7 +742,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1997,
         "literatureForm": "novel",
-        "color": "#a06263",
+        "color": "8",
         "storyLine": "city watch",
         "minorCharacters": [
             "al-jiblah",
@@ -768,7 +768,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1998,
         "literatureForm": "novel",
-        "color": "#ff6162",
+        "color": "1",
         "storyLine": "rincewind",
         "minorCharacters": [
             "dhblah",
@@ -794,7 +794,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1998,
         "literatureForm": "novel",
-        "color": "#758aff",
+        "color": "3",
         "storyLine": "witches",
         "minorCharacters": [
             "magrat garlick",
@@ -819,7 +819,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1998,
         "literatureForm": "story",
-        "color": "#758aff",
+        "color": "3",
         "storyLine": "witches",
         "minorCharacters": [
             "lettice earwig"
@@ -837,7 +837,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 1999,
         "literatureForm": "novel",
-        "color": "#a06263",
+        "color": "8",
         "storyLine": "city watch",
         "minorCharacters": [
             "angua",
@@ -868,7 +868,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2000,
         "literatureForm": "novel",
-        "color": "#e071da",
+        "color": "5",
         "storyLine": "diskworld",
         "minorCharacters": [
             "vetinari",
@@ -896,7 +896,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2001,
         "literatureForm": "novel",
-        "color": "#e0d90e",
+        "color": "4",
         "storyLine": "death",
         "minorCharacters": [
             "the auditors of reality",
@@ -925,7 +925,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2001,
         "literatureForm": "novel",
-        "color": "#ff6162",
+        "color": "1",
         "storyLine": "rincewind",
         "minorCharacters": [
             "cohen the barbarian",
@@ -954,7 +954,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2001,
         "literatureForm": "novel",
-        "color": "#e071da",
+        "color": "5",
         "storyLine": "diskworld",
         "minorCharacters": [
             "keith",
@@ -973,7 +973,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2002,
         "literatureForm": "novel",
-        "color": "#a06263",
+        "color": "8",
         "storyLine": "city watch",
         "minorCharacters": [
             "lu tze",
@@ -999,7 +999,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2002,
         "literatureForm": "story",
-        "color": "#e0d90e",
+        "color": "4",
         "storyLine": "death",
         "minorCharacters": [
             "philosopher"
@@ -1016,7 +1016,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2003,
         "literatureForm": "novel",
-        "color": "#609963",
+        "color": "6",
         "storyLine": "tiffany aching",
         "minorCharacters": [
             "rob anybody",
@@ -1043,7 +1043,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2003,
         "literatureForm": "novel",
-        "color": "#e071da",
+        "color": "5",
         "storyLine": "diskworld",
         "minorCharacters": [
             "shufti",
@@ -1076,7 +1076,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2004,
         "literatureForm": "novel",
-        "color": "#609963",
+        "color": "6",
         "storyLine": "tiffany aching",
         "minorCharacters": [
             "granny weatherwax",
@@ -1101,7 +1101,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2004,
         "literatureForm": "novel",
-        "color": "#a370e8",
+        "color": "7",
         "storyLine": "moist von lipwig",
         "minorCharacters": [
             "adora belle dearheart",
@@ -1126,7 +1126,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2005,
         "literatureForm": "novel",
-        "color": "#a06263",
+        "color": "8",
         "storyLine": "city watch",
         "minorCharacters": [
             "sally von humpeding",
@@ -1160,7 +1160,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2005,
         "literatureForm": "story",
-        "color": "#e071da",
+        "color": "5",
         "storyLine": "diskworld",
         "minorCharacters": [
             "a. e. pessimal",
@@ -1179,7 +1179,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2006,
         "literatureForm": "novel",
-        "color": "#609963",
+        "color": "6",
         "storyLine": "tiffany aching",
         "minorCharacters": [
             "granny weatherwax",
@@ -1203,7 +1203,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2007,
         "literatureForm": "novel",
-        "color": "#a370e8",
+        "color": "7",
         "storyLine": "moist von lipwig",
         "minorCharacters": [
             "adora belle dearheart",
@@ -1226,7 +1226,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2009,
         "literatureForm": "novel",
-        "color": "#ff6162",
+        "color": "1",
         "storyLine": "rincewind",
         "minorCharacters": [
             "rufus drumknott",
@@ -1251,7 +1251,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2010,
         "literatureForm": "novel",
-        "color": "#609963",
+        "color": "6",
         "storyLine": "tiffany aching",
         "minorCharacters": [
             "granny weatherwax",
@@ -1278,7 +1278,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2011,
         "literatureForm": "novel",
-        "color": "#a06263",
+        "color": "8",
         "storyLine": "city watch",
         "minorCharacters": [
             "summoning dark",
@@ -1312,7 +1312,7 @@ var books =
         "universe": "the long earth",
         "releaseYear": 2012,
         "literatureForm": "novel",
-        "color": "#5960a0",
+        "color": "9",
         "storyLine": "the long earth",
         "minorCharacters": [
             "sally linsay",
@@ -1342,7 +1342,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2013,
         "literatureForm": "novel",
-        "color": "#a370e8",
+        "color": "7",
         "storyLine": "moist von lipwig",
         "minorCharacters": [
             "adora belle dearheart",
@@ -1365,7 +1365,7 @@ var books =
         "universe": "the long earth",
         "releaseYear": 2013,
         "literatureForm": "novel",
-        "color": "#5960a0",
+        "color": "9",
         "storyLine": "the long earth",
         "minorCharacters": [
             "sally linsay",
@@ -1398,7 +1398,7 @@ var books =
         "universe": "the long earth",
         "releaseYear": 2014,
         "literatureForm": "novel",
-        "color": "#5960a0",
+        "color": "9",
         "storyLine": "the long earth",
         "minorCharacters": [
             "sally linsay",
@@ -1421,7 +1421,7 @@ var books =
         "universe": "diskworld",
         "releaseYear": 2015,
         "literatureForm": "novel",
-        "color": "#609963",
+        "color": "6",
         "storyLine": "tiffany aching",
         "minorCharacters": [
             "the kelda",

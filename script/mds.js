@@ -66,17 +66,19 @@
             .attr("width", w)
             .attr("height", h);
 
+        let palette =  new Colors().set15();
+
+        let tooltip = d3.select("#tooltip")
+            .style("opacity", 0);
+
         let nodes = svg.selectAll("circle")
             .data(data)
             .enter()
             .append("circle")
-            .attr("r", function (d, i) {
-                if (data[i].literatureForm === 'novel') {
-                    return pointRadius;
-                } else {
-                    return smallPointRadius;
-                }
+            .attr("id", function (d, i) {
+                return "b" + d.no;
             })
+            .attr("r", radius)
             .attr("cx", function (d, i) {
                 return xScale(xPos[i]);
             })
@@ -84,22 +86,54 @@
                 return yScale(yPos[i]);
             })
             .attr("fill", function (d, i) {
-                return data[i].color;
+                return palette[data[i].color - 1];
             })
             .attr("stroke", function (d, i) {
                 if (data[i].coAuthor.length > 1) {
                     return 'black';
                 } else {
-                    return d3.color(data[i].color).darker(10);
+                    return palette[data[i].color - 1].darker(1);
                 }
             })
             .attr("stroke-width", function (d, i) {
                 if (data[i].coAuthor.length > 1) {
                     return 2;
                 } else {
-                    return 1;
+                    return 3;
                 }
+            })
+            .on('mouseover', function (d, i) {
+                this.parentNode.appendChild(this);
+                tooltip
+                    .transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                svg.select("#b" + d.no)
+                    .transition()
+                    .duration(350)
+                    .attr("r", 50);
+
+                tooltip.html(d.title + "<br/>"  + d.releaseYear)
+                    .style("left", ( xScale(xPos[i])) + "px")
+                    .style("top", ( yScale(yPos[i])) + "px");
+            })
+            .on('mouseout', function (d, i) {
+                tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+                svg.select("#b" + d.no)
+                    .transition()
+                    .duration(300)
+                    .attr("r", radius(d, i));
             });
+
+            function radius(d, i){
+                if (data[i].literatureForm === 'novel') {
+                    return pointRadius;
+                } else {
+                    return smallPointRadius;
+                }
+            }
     };
 
     mds.updateD3ScatterPlot = function (elementSelector, xPos, yPos) {
