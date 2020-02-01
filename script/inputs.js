@@ -1,3 +1,15 @@
+/*******************************************************************************
+ * Copyright (c) 2019, 2020 CleverClover
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the MIT which is available at
+ * https://spdx.org/licenses/MIT.html#licenseText
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *     CleverClover - initial API and implementation
+ *******************************************************************************/
 let Inputs = function (elements) {
     const names = ["universe", "storyLine", "setName", "mainCharacters", "minorCharacters", "literatureForm", "coAuthor"];
     const defaults = [170, 370, 92, 150, 30, 4, 10];

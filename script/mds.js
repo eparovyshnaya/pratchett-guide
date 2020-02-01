@@ -1,17 +1,20 @@
-(function (mds) {
-    "use strict";
-    /// given a matrix of distances between some points, returns the
-    /// point coordinates that best approximate the distances using
-    /// classic multidimensional scaling
-    mds.classic = function (distances, dimensions) {
-        dimensions = dimensions || 2;
-
-        // square distances
+/*******************************************************************************
+ * Copyright (c) 2019, 2020 CleverClover
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the MIT which is available at
+ * https://spdx.org/licenses/MIT.html#licenseText
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *     CleverClover - initial API and implementation
+ *******************************************************************************/
+let Mds = function() {
+    this.classic = function (distances) {
         let means = numeric.mul(-0.5, numeric.pow(distances, 2));
-
-        // double centre the rows/columns
-        function mean(A) {
-            return numeric.div(numeric.add.apply(null, A), A.length);
+        function mean(array) {
+            return numeric.div(numeric.add.apply(null, array), array.length);
         }
 
         let rowMeans = mean(means),
@@ -24,16 +27,13 @@
             }
         }
 
-        // take the SVD of the double centred matrix, and return the points from it
-        let ret = numeric.svd(means);
-        let eigenValues = numeric.sqrt(ret.S);
-        return ret.U.map(function (row) {
-            return numeric.mul(row, eigenValues).splice(0, dimensions);
-        });
+         let ret = numeric.svd(means);
+         return ret.U.map(function (row) {
+             return numeric.mul(row, numeric.sqrt(ret.S)).splice(0, 2);
+         });
     };
 
-    // draws a scatter plot of points, useful for displaying the output from mds.classic etc
-    mds.drawD3ScatterPlot = function (elementSelector, xPos, yPos,  data, params) {
+    this.draw = function (elementSelector, xPos, yPos,  data, params) {
         let element = d3.select(elementSelector);
         params = params || {};
         let padding = params.padding || 32,
@@ -111,11 +111,10 @@
                 svg.select("#b" + d.no)
                     .transition()
                     .duration(350)
-                    .attr("r", 50);
-
+                    .attr("r", 40);
                 tooltip.html(d.title + "<br/>"  + d.releaseYear)
-                    .style("left", ( xScale(xPos[i])) + "px")
-                    .style("top", ( yScale(yPos[i])) + "px");
+                    .style("left", (xScale(xPos[i])) + "px")
+                    .style("top", (yScale(yPos[i])) + "px");
             })
             .on('mouseout', function (d, i) {
                 tooltip.transition()
@@ -136,7 +135,7 @@
             }
     };
 
-    mds.updateD3ScatterPlot = function (elementSelector, xPos, yPos) {
+    this.update = function (elementSelector, xPos, yPos) {
         let element = d3.select(elementSelector);
         let svg = element.select("svg");
         let w = svg.attr("width");
@@ -168,4 +167,5 @@
                 return "translate(" + (xScale(xPos[index] )- x0) + ", " + (yScale(yPos[index]) - y0) + ")";
             })
     };
-}(window.mds = window.mds || {}));
+
+};
