@@ -33,7 +33,7 @@
     };
 
     // draws a scatter plot of points, useful for displaying the output from mds.classic etc
-    mds.drawD3ScatterPlot = function (elementSelector, xPos, yPos, labels, data, params) {
+    mds.drawD3ScatterPlot = function (elementSelector, xPos, yPos,  data, params) {
         let element = d3.select(elementSelector);
         params = params || {};
         let padding = params.padding || 32,
@@ -45,8 +45,8 @@
             yDomain = [
                 Math.max.apply(null, yPos),
                 Math.min.apply(null, yPos)].reverse(),
-            pointRadius = params.pointRadius || 6,
-            smallPointRadius = params.pointRadius || 4;
+            pointRadius = params.pointRadius || 15,
+            smallPointRadius = params.pointRadius || 10;
 
         let xScale = d3.scaleLinear().domain(xDomain)
             .range([padding, w - padding]);
@@ -67,7 +67,7 @@
             .attr("height", h);
 
         let nodes = svg.selectAll("circle")
-            .data(labels)
+            .data(data)
             .enter()
             .append("circle")
             .attr("r", function (d, i) {
@@ -88,14 +88,14 @@
             })
             .attr("stroke", function (d, i) {
                 if (data[i].coAuthor.length > 1) {
-                    return 'darkgray';
+                    return 'black';
                 } else {
-                    return 'gray';
+                    return d3.color(data[i].color).darker(10);
                 }
             })
             .attr("stroke-width", function (d, i) {
                 if (data[i].coAuthor.length > 1) {
-                    return 3;
+                    return 2;
                 } else {
                     return 1;
                 }
