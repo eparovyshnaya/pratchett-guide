@@ -110,10 +110,10 @@ span.dark_background {
 
 #tooltip {
     position: absolute;
-    text-align: center;
+    text-align: left;
     margin: 10px;
     padding: 10px;
-    font: 12px sans-serif;
+    font: 18px sans-serif;
     background: lightsteelblue;
     border: 0px;
     border-radius: 8px;

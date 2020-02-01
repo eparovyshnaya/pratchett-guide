@@ -162,7 +162,7 @@ let Mds = function() {
             .transition()
             .duration(200)
             .style("opacity", .95);
-        tooltip.html(d.no + "<br/>" + d.title + "<br/>"  + d.releaseYear)
+        tooltip.html(tooltipText(d))
             .style("left", (d.x + 40) + "px")
             .style("top", (d.y + 40) + "px");
     };
@@ -177,6 +177,26 @@ let Mds = function() {
             .attr("r", radius(d));
     };
 
+    function tooltipText(d){
+        let coAuthor = "";
+        if(d.coAuthor.length > 1){
+            coAuthor = " with " + d.coAuthor;
+        }
+        let location = "";
+        if(d.universe.length > 0){
+            location = d.universe;
+        }
+        if(d.storyLine.length > 0){
+            if(location.length > 0){
+                location = location + " / "
+            }
+            location = location + d.storyLine;
+        }
+        return d.no + ".<br/>" +
+            d.title + "<br/>"  +
+            "written in " + d.releaseYear + coAuthor + "<br/>" +
+            location;
+    }
 
     function radius(d){
         if (d.literatureForm === 'novel') {
