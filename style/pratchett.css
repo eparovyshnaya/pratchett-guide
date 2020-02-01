@@ -1,3 +1,15 @@
+/*******************************************************************************
+ * Copyright (c) 2019, 2020 CleverClover
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the MIT which is available at
+ * https://spdx.org/licenses/MIT.html#licenseText
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *     CleverClover - initial API and implementation
+ *******************************************************************************/
 @font-face {
 	font-family: "SIMPLIFICA Typeface";
 	src: url("data/SIMPLIFICA Typeface.ttf") format("truetype");
@@ -99,9 +111,8 @@ span.dark_background {
 #tooltip {
     position: absolute;
     text-align: center;
-   /* width: 60px;
-    height: 28px;
-    padding: 2px;*/
+    margin: 10px;
+    padding: 10px;
     font: 12px sans-serif;
     background: lightsteelblue;
     border: 0px;

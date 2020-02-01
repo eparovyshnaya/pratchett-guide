@@ -11,6 +11,9 @@
  *     CleverClover - initial API and implementation
  *******************************************************************************/
 let Mds = function() {
+    let tooltip = d3.select("#tooltip")
+
+
     this.classic = function (distances) {
         let means = numeric.mul(-0.5, numeric.pow(distances, 2));
         function mean(array) {
@@ -44,9 +47,7 @@ let Mds = function() {
                 Math.max.apply(null, xPos)].reverse(),
             yDomain = [
                 Math.max.apply(null, yPos),
-                Math.min.apply(null, yPos)].reverse(),
-            pointRadius = params.pointRadius || 15,
-            smallPointRadius = params.pointRadius || 10;
+                Math.min.apply(null, yPos)].reverse();
 
         let xScale = d3.scaleLinear().domain(xDomain)
             .range([padding, w - padding]);
@@ -68,71 +69,53 @@ let Mds = function() {
 
         let palette =  new Colors().set15();
 
-        let tooltip = d3.select("#tooltip")
-            .style("opacity", 0);
+        tooltip.style("opacity", 0);
 
         let nodes = svg.selectAll("circle")
             .data(data)
             .enter()
             .append("circle")
-            .attr("id", function (d, i) {
+            .attr("id", function (d) {
                 return "b" + d.no;
             })
             .attr("r", radius)
             .attr("cx", function (d, i) {
-                return xScale(xPos[i]);
+                d.x = xScale(xPos[i]);
+                return d.x;
             })
             .attr("cy", function (d, i) {
-                return yScale(yPos[i]);
+                d.y = yScale(yPos[i]);
+                return d.y;
             })
-            .attr("fill", function (d, i) {
-                return palette[data[i].color - 1];
+            .attr("fill", function (d) {
+                return palette[d.color - 1];
             })
-            .attr("stroke", function (d, i) {
-                if (data[i].coAuthor.length > 1) {
+            .attr("stroke", function (d) {
+                if (d.coAuthor.length > 1) {
                     return 'black';
                 } else {
-                    return palette[data[i].color - 1].darker(1);
+                    return palette[d.color - 1].darker(1);
                 }
             })
-            .attr("stroke-width", function (d, i) {
-                if (data[i].coAuthor.length > 1) {
+            .attr("stroke-width", function (d) {
+                if (d.coAuthor.length > 1) {
+                    return 6;
+                } else {
                     return 2;
-                } else {
-                    return 3;
                 }
             })
-            .on('mouseover', function (d, i) {
-                this.parentNode.appendChild(this);
-                tooltip
-                    .transition()
-                    .duration(200)
-                    .style("opacity", .9);
-                svg.select("#b" + d.no)
-                    .transition()
-                    .duration(350)
-                    .attr("r", 40);
-                tooltip.html(d.title + "<br/>"  + d.releaseYear)
-                    .style("left", (xScale(xPos[i])) + "px")
-                    .style("top", (yScale(yPos[i])) + "px");
+            .attr("stroke-dasharray", function (d) {
+                if (d.coAuthor.length > 1) {
+                    return "1 4";
+                }
             })
-            .on('mouseout', function (d, i) {
-                tooltip.transition()
-                    .duration(500)
-                    .style("opacity", 0);
-                svg.select("#b" + d.no)
-                    .transition()
-                    .duration(300)
-                    .attr("r", radius(d, i));
+            .on('mouseover', function (d) {
+                this.parentNode.appendChild(this); // move to the front
+                drawToolTip(d);
+            })
+            .on('mouseout', function (d) {
+                hideToolTip(d);
             });
-
-            function radius(d, i){
-                if (data[i].literatureForm === 'novel') {
-                    return pointRadius;
-                } else {
-                    return smallPointRadius;
-                }
-            }
     };
 
     this.update = function (elementSelector, xPos, yPos) {
@@ -164,8 +147,43 @@ let Mds = function() {
                 let current = circles[index];
                 let x0 = current.cx.baseVal.value;
                 let y0 = current.cy.baseVal.value;
-                return "translate(" + (xScale(xPos[index] )- x0) + ", " + (yScale(yPos[index]) - y0) + ")";
+                data.x = xScale(xPos[data.no]);
+                data.y = yScale(yPos[data.no]);
+                return "translate(" + (data.x - x0) + ", " + (data.y - y0) + ")";
             })
+    };
+
+    function drawToolTip(d){
+        d3.select("svg").select("#b" + d.no)
+            .transition()
+            .duration(350)
+            .attr("r", 40);
+        tooltip
+            .transition()
+            .duration(200)
+            .style("opacity", .95);
+        tooltip.html(d.no + "<br/>" + d.title + "<br/>"  + d.releaseYear)
+            .style("left", (d.x + 40) + "px")
+            .style("top", (d.y + 40) + "px");
+    };
+
+    function hideToolTip(d){
+        tooltip.transition()
+            .duration(500)
+            .style("opacity", 0);
+        d3.select("svg").select("#b" + d.no)
+            .transition()
+            .duration(300)
+            .attr("r", radius(d));
+    };
+
+
+    function radius(d){
+        if (d.literatureForm === 'novel') {
+            return 15;
+        } else {
+            return 10;
+        }
     };
 
 };

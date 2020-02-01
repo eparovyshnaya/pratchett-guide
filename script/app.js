@@ -27,6 +27,7 @@ function visualize(books, distances) {
 }
 
 function update(distances) {
+    let mds = new Mds();
     let positions = numeric.transpose(mds.classic(distances));
     mds.update(
         "#picture",

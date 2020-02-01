@@ -369,7 +369,7 @@ var books =
         "universe": "",
         "releaseYear": 1990,
         "literatureForm": "novel",
-        "color": "white",
+        "color": "14",
         "storyLine": "",
         "minorCharacters": [
             "agnes nutter",
