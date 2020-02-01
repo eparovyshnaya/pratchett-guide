@@ -10,91 +10,27 @@
  * Contributors:
  *     CleverClover - initial API and implementation
  *******************************************************************************/
-@font-face {
-	font-family: "SIMPLIFICA Typeface";
-	src: url("data/SIMPLIFICA Typeface.ttf") format("truetype");
-}
-
-body {
-	font-family: "SIMPLIFICA Typeface", Arial;
-	color: #212121;
+html, body{
+    font-family: Verdana, sans-serif;
+    height: 100%;
 }
 
 #about {
-	background: #E0BE36;
-}
-
-#tool {
-	background: white;
-}
-
-#legend {
-	background: #BAA898;
-}
-
-#books {
 	background: #9D6381;
 }
 
-nav, footer {
-	background: #8CBCB9;
+#tool {
+	background: #D6F870;
+	min-height: 600px;
+	height: 1px;y
 }
 
-a {
-	color: #E0E0E0;
-	text-decoration: none;
+#legend {
+	background: #9D6381;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
-h1 {
-	font-size: 10em;
-}
-
-h2 {
-	font-size: 7em;
-}
-
-h3 {
-	font-size: 5em;
-	text-align: left;
-}
-
-ul {
-	text-align: left;
-}
-
-p, ul {
-	font-size: 4em;
-}
-
-p.scroll_text {
-	font-size: 1.5em;
-}
-
-p.quote_text {
-	font-size: 5em;
-}
-
-p.quote_author {
-	font-size: 2em;
-	text-align: right;
-	padding-right: 10%;
-}
-
-p.item {
-	text-align: left;
-}
-
-span.keyword {
-	color: #D84315;
-}
-
-span.dark_background {
-	padding: 5px;
-	background-color: rgba(0, 0, 0, 0.65);
+#books {
+	background: #BAA898;
 }
 
 .section {
@@ -103,19 +39,72 @@ span.dark_background {
 	padding-right: 10%;
 }
 
-.character {
-	max-width: 150px;
-	max-height: 150px;
-}
-
 #tooltip {
     position: absolute;
     text-align: left;
     margin: 10px;
     padding: 10px;
     font: 18px sans-serif;
-    background: lightsteelblue;
+    background: #DF64BD;
     border: 0px;
     border-radius: 8px;
     pointer-events: none;
+}
+
+#picture{
+    display: inline-block;
+    width: 72%;
+    height: 100%;
+}
+
+#affinities{
+    display: inline-block;
+    float: right;
+    width: 21%;
+    height: 100%;
+    background: #8F2471;
+    padding-left: 50px;
+    font-size: 14px;
+}
+
+#affinities .title {
+    margin: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#affinities .input {
+    display : block;
+    width: 100%;
+}
+
+#affinities .input label {
+    width: 100px;
+    display: inline-block;
+}
+
+#affinities input[type=number], #affinities #render {
+    width : 100px;
+    padding 10px;
+    margin: 10px;
+    border: 0px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#affinities input[type=number] {
+    height: 30px;
+    background: #C9F83E;
+}
+
+#affinities #render {
+    margin-top: 50px;
+    height: 20px;
+    background: #759D00;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#affinities #render:hover {
+    background: #93B52D;
 }

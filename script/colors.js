@@ -14,7 +14,7 @@ let Colors = function () {
 
     this.set15 = function(){
         return [
-           d3.color("#A66900"),
+           d3.color("#FFD601"),
            d3.color("#C10087"),
            d3.color("#B1F101"),
            d3.color("#0F4DA8"),
@@ -26,7 +26,7 @@ let Colors = function () {
            d3.color("#432C83"),
            d3.color("#6E48D7"),
            d3.color("#FF0D01"),
-           d3.color("#FFD601"),
+           d3.color("#A66900"),
            d3.color("#00C619"),
            d3.color("#A68B00")
          ];

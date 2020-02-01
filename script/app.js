@@ -13,7 +13,7 @@
 function visualize(books, distances) {
     let mds = new Mds();
     let positions = numeric.transpose(mds.classic(distances));
-    let width = Math.min(1400, document.documentElement.clientWidth - 20);
+    let width = Math.min(1200, document.documentElement.clientWidth - 20);
     mds.draw(
         "#picture",
         positions[0],

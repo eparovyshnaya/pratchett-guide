@@ -187,7 +187,7 @@ let Mds = function() {
             }
             location = location + d.storyLine;
         }
-        return d.no + ".<br/>" +
+        return (d.no + 1) + ".<br/>" +
             d.title + "<br/>"  +
             "written in " + d.releaseYear + coAuthor + "<br/>" +
             location;
