@@ -13,7 +13,6 @@
 let Mds = function() {
     let tooltip = d3.select("#tooltip")
 
-
     this.classic = function (distances) {
         let means = numeric.mul(-0.5, numeric.pow(distances, 2));
         function mean(array) {
@@ -39,7 +38,7 @@ let Mds = function() {
     this.draw = function (elementSelector, xPos, yPos,  data, params) {
         let element = d3.select(elementSelector);
         params = params || {};
-        let padding = params.padding || 32,
+        let padding = params.padding || 44,
             w = params.w || Math.min(720, document.documentElement.clientWidth - padding),
             h = params.h || w,
             xDomain = [
@@ -91,11 +90,7 @@ let Mds = function() {
                 return palette[d.color - 1];
             })
             .attr("stroke", function (d) {
-                if (d.coAuthor.length > 1) {
-                    return 'black';
-                } else {
-                    return palette[d.color - 1].darker(1);
-                }
+                return palette[d.color - 1].darker(1);
             })
             .attr("stroke-width", function (d) {
                 if (d.coAuthor.length > 1) {

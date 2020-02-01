@@ -23,7 +23,7 @@
 
     <link type="text/css" rel="stylesheet" href="style/pratchett.css"/>
 
-    <script>
+    <script language="JavaScript">
         $(function () {
             let layout = new Layout();
             let inputs = new Inputs($("#affinities input"));
@@ -37,7 +37,10 @@
             function distances() {
                 return layout.fresh(inputs.weights(), books);
             }
-        });
+        })
+
+
+
 
 
 
@@ -45,12 +48,6 @@
 
 </head>
 <body>
-<nav>
-    <a href="">about</a> |
-    <a href="">tool</a> |
-    <a href="">legend</a> |
-    <a href="">books</a>
-</nav>
 <section id="about">
     What is this all about
 </section>
@@ -61,15 +58,31 @@
     </div>
     <aside id="affinities">
         <form>
-            <div>Assign weight for common meta between two books</div>
-            <label>universe</label><input id="universe" type="number" min="0" max="500" value="170">
-            <label>storyline</label><input id="storyline" type="number" min="0" max="500" value="370">
-            <label>set</label><input id="set" type="number" min="0" max="500" value="92">
-            <label>main char</label><input id="main_char" type="number" min="0" max="500" value="150">
-            <label>minor char</label><input id="minor_char" type="number" min="0" max="500" value="30">
-            <label>literature form</label><input id="lit_form" type="number" min="0" max="100" value="4">
-            <label>co-author</label><input id="co_author" type="number" min="0" max="500" value="10">
-            <label id="render">render</label>
+            <div class="title">Assign weights to a data shared between a couple of books</div>
+            <div class="input">
+                <label>universe</label><input id="universe" type="number" min="0" max="500" value="170">
+            </div>
+            <div class="input">
+                <label>storyline</label><input id="storyline" type="number" min="0" max="500" value="370">
+            </div>
+            <div class="input">
+                <label>set</label><input id="set" type="number" min="0" max="500" value="92">
+            </div>
+            <div class="input">
+                <label>main char</label><input id="main_char" type="number" min="0" max="500" value="150">
+            </div>
+            <div class="input">
+                <label>minor char</label><input id="minor_char" type="number" min="0" max="500" value="30">
+            </div>
+            <div class="input">
+                <label>literature form</label><input id="lit_form" type="number" min="0" max="100" value="4">
+            </div>
+            <div class="input">
+                <label>co-author</label><input id="co_author" type="number" min="0" max="500" value="10">
+            </div>
+            <div class="input"><label></label>
+                <div id="render">render</div>
+            </div>
         </form>
     </aside>
 </section>
