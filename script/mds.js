@@ -101,7 +101,7 @@ let Mds = function() {
             })
             .attr("stroke-dasharray", function (d) {
                 if (d.coAuthor.length > 1) {
-                    return "1 4";
+                    return "1 2";
                 }
             })
             .on('mouseover', function (d) {
@@ -195,9 +195,9 @@ let Mds = function() {
 
     function radius(d){
         if (d.literatureForm === 'novel') {
-            return 15;
+            return 9;
         } else {
-            return 10;
+            return 5;
         }
     };
 
