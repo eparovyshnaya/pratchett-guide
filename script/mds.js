@@ -40,7 +40,7 @@ let Mds = function() {
         params = params || {};
         let padding = params.padding || 44,
             w = params.w || Math.min(720, document.documentElement.clientWidth - padding),
-            h = params.h || w,
+            h = params.h || Math.min(w, document.documentElement.clientHeight - padding),
             xDomain = [
                 Math.min.apply(null, xPos),
                 Math.max.apply(null, xPos)].reverse(),
@@ -175,7 +175,7 @@ let Mds = function() {
     function tooltipText(d){
         let coAuthor = "";
         if(d.coAuthor.length > 1){
-            coAuthor = " with " + d.coAuthor;
+            coAuthor =  "<p class='tt tt-coauthor'>" + " with " + d.coAuthor + "</p>";
         }
         let location = "";
         if(d.universe.length > 0){
@@ -187,10 +187,11 @@ let Mds = function() {
             }
             location = location + d.storyLine;
         }
-        return (d.no + 1) + ".<br/>" +
-            d.title + "<br/>"  +
-            "written in " + d.releaseYear + coAuthor + "<br/>" +
-            location;
+        return "<p class='tt tt-no'>" + (d.no + 1) + "</p>" +
+            "<p class='tt tt-title'>" + d.title + "</p>"  +
+            "<p class='tt tt-location'>" + location + "</p>"  +
+            "<p class='tt tt-release'>" + d.releaseYear + "</p>"  +
+            coAuthor;
     }
 
     function radius(d){
