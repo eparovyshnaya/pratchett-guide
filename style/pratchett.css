@@ -16,21 +16,20 @@ html, body{
 }
 
 #about {
-	background: #9D6381;
+	background: #542344;
 }
 
 #tool {
-	background: #D6F870;
-	min-height: 600px;
-	height: 1px;y
+	min-height: 700px;
+	height: 1px;
+	 border: 1px dashed #D8BFAA;
 }
 
 #legend {
-	background: #9D6381;
+	background: #542344;
 }
 
 #books {
-	background: #BAA898;
 }
 
 .section {
@@ -44,8 +43,8 @@ html, body{
     text-align: left;
     margin: 10px;
     padding: 10px;
-    font: 18px sans-serif;
-    background: #DF64BD;
+    font: 15px sans-serif;
+    background: #D8BFAA;
     border: 0px;
     border-radius: 8px;
     pointer-events: none;
@@ -59,18 +58,24 @@ html, body{
 
 #affinities{
     display: inline-block;
+    text-align: center;
     float: right;
     width: 21%;
     height: 100%;
-    background: #8F2471;
-    padding-left: 50px;
+    padding-left: 5px;
+    border-left: 1px dashed #D8BFAA;
     font-size: 14px;
+    color: #542344;
 }
 
 #affinities .title {
     margin: 30px;
     text-align: center;
     font-size: 16px;
+    font-family: bold-ysans,sans-serif;
+    font-weight:600;
+    line-height: 1.5;
+
 }
 
 #affinities .input {
@@ -84,7 +89,7 @@ html, body{
 }
 
 #affinities input[type=number], #affinities #render {
-    width : 100px;
+    width : 70px;
     padding 10px;
     margin: 10px;
     border: 0px;
@@ -94,17 +99,49 @@ html, body{
 
 #affinities input[type=number] {
     height: 30px;
-    background: #C9F83E;
+    background: #EBF5EE;
 }
 
 #affinities #render {
-    margin-top: 50px;
-    height: 20px;
-    background: #759D00;
+    margin-top: 20px;
+    height: 30px;
+    background: #808080;
     cursor: pointer;
     display: inline-block;
+    padding-top: 10px;
 }
 
 #affinities #render:hover {
-    background: #93B52D;
+    background: #959595;
+}
+
+.tt {
+    margin: 0;
+    line-height: 1.5;
+    padding-top: 5px;
+}
+
+.tt-no {
+    text-align: center;
+    font-weight: 600;
+}
+
+.tt-title {
+    text-align: center;
+    font-weight: 600;
+}
+
+.tt-location {
+    text-transform: capitalize;
+    padding-bottom: 5px;
+}
+
+.tt-release {
+    border-top: 1px  #EBF5EE dashed;
+    text-align: right;
+}
+
+.tt-coauthor {
+    text-align: right;
+    font-style: italic;
 }
